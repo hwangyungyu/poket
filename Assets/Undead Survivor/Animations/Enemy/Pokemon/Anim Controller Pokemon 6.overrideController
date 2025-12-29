@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Anim Controller Pokemon 6
+  m_Controller: {fileID: 9100000, guid: 9ee34c39768affb40991a51ec82a9b84, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 110c6cef8dd17ad4b996f29c8eb9ff1e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: de57d2e8874bcb24590509574fdd516f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b731026da0bcd1b49b22d6576e9d01a3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b731026da0bcd1b49b22d6576e9d01a3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b7c64ff3e79bd334eb136cb1d03aefc7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bf2fcf0648d569f4e845ecfc9ced010a, type: 2}

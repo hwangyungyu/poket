@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b0fd93dc88f9342a8c3118a4e5ce5e, type: 3}
+  m_Name: Poke 0
+  m_EditorClassIdentifier: 
+  itemType: 0
+  itemId: 0
+  itemName: "\uC18C\uB77C\uBD81"
+  itemDesc: "\uBC14\uB77C\uBCF4\uB294 \uBC29\uD5A5\uC73C\uB85C \n\uB808\uC774\uC800\uB97C
+    \uBC1C\uC0AC\uD55C\uB2E4"
+  itemIcon: {fileID: 981807728, guid: 235340526c75ae1489828901aa1dc13a, type: 3}
+  baseDamage: 4.5
+  baseCount: 3
+  damages:
+  - 0.5
+  - 1
+  - 1.5
+  - 2
+  - 3
+  counts: 0100000001000000010000000100000002000000
+  projectile: {fileID: 8266781693483819101, guid: 3e0ed6674d1deb947978d4adfc2d8c69, type: 3}
+  hand: {fileID: 0}
