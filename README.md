@@ -1,0 +1,633 @@
+# 포켓 서바이벌
+
+주황 배경 : 반드시 필요 (우선도 높음) <중요도 높음>
+파란 배경 : 상의 후 추가 {상의 후 결정}
+
+초록 배경 : 물어볼 점 ?(사이에 내용 입력)?
+
+빨강 배경 : 후순위 (우선도 낮음) [중요도 낮음]
+
+# 일정
+
+---
+
+1주차(7/15 ~ 7/18) : 기본 전투 시스템 구현, 플레이어 이동 및 몬스터 자동 공격 시스템 구축
+
+2주차(7/19 ~  7/25) : 몬스터 포획 시스템 및 기본 UI 구성
+
+3주차(7/26 ~ 8/1) : 스테이지 생성 및 레벨 업 시스템 구현
+
+4주차(8/2 ~ 8/8) : 기본 패시브 시스템 구현, 테스트 및 디버깅
+
+# 기획
+
+---
+
+## 게임 시놉시스
+
+---
+
+게임의 분위기는 일반적인 뱀서라이크처럼 무섭거나 압박되는 분위기가 아니라, 전반적으로 아기자기하고 힐링 감성이 있도록 한다.+ 캐주얼한 느낌
+
+레퍼런스) 마녀의 샘, Monument Valley, 우파루마운틴 …etc
+
+- 아기자기한 그래픽과 화려한 이펙트
+- 편안한 배경음악과 귀여운 사운드 효과
+- 게임의 긴장감 완화 및 보상 시스템 강화
+
+### 게임 스토리
+
+- **배경 설정**
+    
+    먼 옛날, 인간과 몬스터는 서로 친구로 지내며 조화롭게 살았습니다. 함께 일하고, 놀며, 어려운 시기에는 서로를 도왔습니다. 하지만 어느 날, 어떤 사건이 일어나면서 인간과 몬스터의 사이가 틀어지게 되었습니다. 서로의 신뢰는 깨졌고, 그 후로 오랜 세월이 흐르며 인간과 몬스터는 서로를 적대하게 되었습니다. 그들의 갈등은 점점 심화되어 서로의 영역을 넘지 않으려는 암묵적인 규칙이 생겼습니다.
+    
+- **주인공의 이야기**
+    
+    주인공은 인간의 마을과 멀리 떨어진 산 속에서 조용히 살고 있었습니다. 어린 시절부터 주인공은 한 몬스터와 친구가 되어 함께 자랐습니다. 그 몬스터는 주인공의 가장 친한 친구이자 보호자였습니다. 주인공은 이 몬스터를 통해 몬스터들이 적이 아니라는 것을 깨달았습니다. 몬스터들은 그저 다른 생명체일 뿐이며, 서로 이해하고 소통할 수 있는 가능성이 있다는 것을 믿게 되었습니다.
+    
+- **모험의 시작**
+    
+    어느 날, 주인공은 몬스터와 인간이 다시 친구가 되기를 간절히 바라는 마음으로 모험을 떠날 결심을 합니다. 주인공은 인간과 몬스터 사이의 갈등을 종식시키기 위해 몬스터들의 신을 설득하러 나서기로 합니다. 이 길이 험난하고 위험할 것이라는 것을 알지만, 주인공은 친구 몬스터와 함께 이 여정을 시작합니다.
+    
+- **중요한 만남과 결단**
+    
+    여정의 끝에 가까워질수록, 주인공은 인간과 몬스터 사이의 갈등을 일으킨 사건의 진실을 알게 됩니다. 이는 주인공이 몬스터들의 신을 설득하는 데 중요한 역할을 하게 됩니다. 주인공은 다양한 시련을 극복하고, 인간과 몬스터 사이의 오해를 풀기 위해 중요한 결단을 내리게 됩니다.
+    
+- **결말**
+    
+    마침내 주인공은 몬스터들의 신과 대면하게 됩니다. 주인공의 용기와 신념, 그리고 여정 중 함께한 몬스터들과의 우정이 신을 감동시킵니다. 몬스터들의 신은 주인공의 진심을 받아들이고, 인간과 몬스터 사이의 화해를 돕기로 결정합니다.
+    
+    주인공의 노력 덕분에, 인간과 몬스터는 다시 친구가 되기 시작합니다. 오랜 시간 동안 갈등했던 양측은 서로를 이해하고, 함께 새로운 미래를 만들어 나갑니다. 주인공과 그 친구 몬스터는 이 모든 변화의 중심에 서 있으며, 그들의 이야기는 후대에 길이 남게 됩니다.
+    
+
+### 게임 소개 문구
+
+- **게임 요약 설명**
+    
+    '포켓 서바이벌'은 인간과 몬스터 사이의 오랜 갈등을 종식시키기 위해 용감하게 모험을 떠나는 주인공의 이야기를 그린 서바이벌 로그라이트 게임입니다. 다양한 몬스터를 포획하고, 전략적으로 팀을 구성하여 적들과 싸우며, 결국에는 인간과 몬스터의 평화를 이루는 감동적인 스토리를 담고 있습니다.
+    
+- **여정 중 만나는 친구들**
+    
+    여정을 시작한 주인공은 다양한 지역을 탐험하며 여러 몬스터들을 만납니다. 주인공은 이 몬스터들을 포획하여 동료로 삼고, 그들의 도움을 받아 길을 헤쳐 나갑니다. 각 몬스터는 자신만의 속성과 능력을 지니고 있으며, 주인공과 함께 다양한 도전을 극복해 나갑니다.
+    
+- **속성과 상성**
+    
+    여정 중 주인공은 속성과 상성에 따라 팀을 구성해야 합니다. 특정 지역에서는 특정 속성의 몬스터가 더 유리하게 작용하며, 주인공은 전략적으로 몬스터들을 배치하고 싸우게 됩니다. 자동 공격 시스템을 통해 몬스터들은 기본적으로 자동으로 싸우지만, 특정 상황에서는 주인공이 직접 스킬을 사용하여 적을 물리칠 수 있습니다.
+    
+
+### 아트
+
+- **도트 시안**
+    
+    *도트 사용시 주의점 도트 하나당 3**3픽셀로 만들어져서 transform에서 크기 조정시에 0.33으로 설정시에 깨지지 않음 
+    
+    - 65, 80픽셀로 자르되 위치는 잘 조정해야함..
+    
+    → 피드백) 다음부턴 1픽셀로 제작하여 크기 조절 안할 수 있도록 조정하겠습니다.
+    
+    - 주인공 일러스트 레퍼런스 (숲의 아이 느낌 - 몬스터도 아기자기한 느낌으로)
+        
+        ![린.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/9128bfea-4cc4-4350-b663-07da1d1c2746/%EB%A6%B0.png)
+        
+    
+    [Lobby Music.mp3](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/afb9ebd1-a832-4453-bf8f-8b6614e49167/Lobby_Music.mp3)
+    
+    ![Button01_White.Png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ac63afbf-9b8d-4e8c-8f5a-4e56991e4823/Button01_White.png)
+    
+    ![lobby image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c7d42970-5679-46be-b981-fed097d47764/lobby_image.png)
+    
+    ![스크린샷 2024-07-22 142602.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c31a0208-9c0a-4ae1-b796-71df91535662/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-07-22_142602.png)
+    
+    ![pixil-frame-0 (5).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/df750944-05f0-4062-8487-7d1f85fc6a3b/pixil-frame-0_(5).png)
+    
+    ![pixil-frame-0 (4).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7c81ec30-b8dd-4b49-a0fa-3d6876904b98/pixil-frame-0_(4).png)
+    
+    ![fix_human.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/f120c799-05e9-4b4b-a55f-bd9772cc9afc/fix_human.png)
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ffd659c7-5519-4e17-9c85-3baeb6084d1c/Untitled.png)
+    
+    라임 - 회전
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0abf89e0-6156-42f6-8920-5f20c6becbf0/Untitled.png)
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c85ae92d-1ed7-445d-884c-9629b60824c4/Untitled.png)
+    
+    ![fire_bear.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7e8f55e9-3245-4723-aac7-5ecfd545a257/fire_bear.png)
+    
+    ![hit_firebear1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0517e43f-5de3-4ed4-8a9b-28982971e7ce/hit_firebear1.png)
+    
+    ![pixil-frame-0.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/758a81a2-5832-401f-91bb-5b567de7fa97/pixil-frame-0.png)
+    
+    ![hit_firebear.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/30593d81-978d-4aea-b630-79e57b8a0155/hit_firebear.png)
+    
+    파이츄 - 파이어볼
+    
+    ![sora_turtle.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/1a510ebf-2232-4166-8abc-f964f894fa74/sora_turtle.png)
+    
+    ![turtoe_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/be28b255-7c22-43dd-8d3f-f5e55b2d162d/turtoe_hit1.png)
+    
+    ![sora_turtle2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/a59eb2ee-ef5f-4896-b9e1-55de044bc852/sora_turtle2.png)
+    
+    ![turtle_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/60a598f2-5a4c-4e4f-8efc-202d6714853f/turtle_hit2.png)
+    
+    소라북 - 레이저
+    
+    ![water_galmegi.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/4c5d3b3a-ccfc-40d9-9b2e-285b42b444e5/water_galmegi.png)
+    
+    ![bird_hit.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/4fee8aff-5f48-4f76-aeb2-6d179186335b/bird_hit.png)
+    
+    ![water_galmegi2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/b2961d45-caa8-4072-aa58-1c62e0504247/water_galmegi2.png)
+    
+    ![bird_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/98ef52c4-d2ed-4fd1-93f5-9350eeae582c/bird_hit2.png)
+    
+    갈루 - 투척
+    
+    ![fish2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/37c405ba-eba6-4978-a58a-f8d4e4b241f9/fish2.png)
+    
+    ![wheal_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/25efea97-9420-4b84-9ebd-447601944b20/wheal_hit2.png)
+    
+    ![fish1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/2db1fcf2-4918-4b2e-a362-030275bcd256/fish1.png)
+    
+    ![wheal_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/b45be7f6-cca1-4f4c-b108-b0b6652f2b88/wheal_hit1.png)
+    
+    가이오 - 슬로우
+    
+    ![버섯2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0b0cf674-70ce-4821-8d6e-d3e9436dda49/%EB%B2%84%EC%84%AF2.png)
+    
+    ![mush_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ea3489c8-60fc-4c9d-aa27-80657a69e0b1/mush_hit2.png)
+    
+    ![버섯.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c3186b09-1c4b-4d62-87fd-2828d70b9b33/%EB%B2%84%EC%84%AF.png)
+    
+    ![mush_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0c1e722d-0e39-46a2-95b1-fa83cac36d8d/mush_hit1.png)
+    
+    무쉬 - 거대총알
+    
+    ![cat2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7e2f83bb-4462-42e6-8bef-f6795690207e/cat2.png)
+    
+    ![cat_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7b5eef0a-f078-4dec-acff-915a9079fc5d/cat_hit2.png)
+    
+    ![cat.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/363e5627-8bb3-4715-9e4f-3a8045f9d428/cat.png)
+    
+    ![cat_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ad61ad3b-9324-4c82-b4c6-cd06a9587480/cat_hit1.png)
+    
+    물랑이 - 마우스 유도
+    
+    ![small_bird2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/9d895452-69e4-41c0-84d9-d8653bcf6cea/small_bird2.png)
+    
+    ![s_bird_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7789dde5-bc7f-4c8d-97cb-c9a2bdabd62c/s_bird_hit2.png)
+    
+    ![small_bird.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ea03e29a-4584-489c-adae-cdf169233754/small_bird.png)
+    
+    ![s_bird_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/3bc73efa-7377-4020-8191-d2df587dc794/s_bird_hit1.png)
+    
+    헤이 - 기본 적
+    
+    ![fire1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/3e9bba75-f637-4077-b688-b6cdcde4506e/fire1.png)
+    
+    ![fir_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/338158d1-b3e5-46a7-9890-a48ad7861ab2/fir_hit1.png)
+    
+    ![fire2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/784449ca-9020-4696-b05e-754875967f20/fire2.png)
+    
+    ![fir_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/e4994137-3f15-48df-8f68-b77884d2300d/fir_hit2.png)
+    
+    불마뱀 - 지속 딜 장판
+    
+    ![dead2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/a6e42a9c-0d2f-4561-94f0-73974d5a7d0f/dead2.png)
+    
+    ![dead1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/e7669378-9069-434d-9b99-f0bf3ce49632/dead1.png)
+    
+    ![frie_dog1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0772b741-9234-4824-81de-ddc2f8a046d9/frie_dog1.png)
+    
+    ![fire_dog_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/d2966325-30e5-43ca-9c02-cb78d851374c/fire_dog_hit1.png)
+    
+    ![fire_dog2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/83891f31-d80e-4be8-8ebf-1ce3f233a903/fire_dog2.png)
+    
+    ![fire_dog_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/d63fd335-a906-4e46-8ee0-f8ee765fbec9/fire_dog_hit2.png)
+    
+    에이스 - 빠른 적
+    
+    ![leaf_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/29a91cac-d9ed-4aa1-9f08-98fa2840a5b7/leaf_hit1.png)
+    
+    ![leaf_mons.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/466bc0e8-42b4-4eb1-8b2e-49ded9a13ffe/leaf_mons.png)
+    
+    ![leaf_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/d71ad90d-5272-4cf5-b37a-e557fb6c2dfd/leaf_hit2.png)
+    
+    ![leaf_mons2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c52e3452-b864-49cf-a1b4-6ca92f02a7b6/leaf_mons2.png)
+    
+    품바 - 원거리 적
+    
+    ![pixil-frame-0 (1).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/6ed5d8dc-4d96-4fe7-9506-3a6a3d488144/pixil-frame-0_(1).png)
+    
+    ![pixil-frame-0.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7b5faba0-8256-4a5a-bd22-ae22f0a9eff0/pixil-frame-0.png)
+    
+    보스
+    
+    패턴 1 - 돌진 : 붉은 일직선 레이저로 경로를 표시해준 후 몇 초가 지나면 돌진
+    
+    패턴 2 - 총알 발사 : 전방위로 총알을 3~4회 발사 (이전 파이츄 느낌)
+    
+    로고
+    
+    ![pixil-frame-0 (1).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/f66c00c0-3bf8-4c6a-ac08-91682f3b0520/pixil-frame-0_(1).png)
+    
+    ![pixil-frame-0 (2).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c4fa55b8-2756-4d6f-bcf6-693de905e5c6/pixil-frame-0_(2).png)
+    
+    ![pixil-frame-0 (3).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0c8aec3b-588b-4b9f-b7d1-d92b49832386/pixil-frame-0_(3).png)
+    
+
+![포켓로고.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/aff853dd-a162-4125-9af3-b178bd93e3a9/%ED%8F%AC%EC%BC%93%EB%A1%9C%EA%B3%A0.png)
+
+### 일정
+
+- 계획
+    
+    해야할 일
+    
+    (1)
+    모두가 사용 가능한 기본 토대(공유본)
+    애니메이션이 모두 바뀌어져 있는 버전 제작
+    (이주환)
+    
+    (2)
+    스킬 10개 제작(아이디어 받고 계속 제작하기)
+    현재 5개 완성
+    
+    (무기 스킬)
+    
+    1. 다방향 총알 공격
+    2. 장판
+    3. 레이저
+    4. 슬로우 장판
+    5. 거대 총알
+    6.밀어내기 (임시)
+    
+    7.일정 시간 뒤에 돌진하는 스킬
+    랜덤 좌표에서 랜덤 좌표로 물체를 이동 시킨다.
+    
+    8.일정 시간 뒤에 가까운 대상에게 큰 피해
+    -> 보이지 않는 총알을 날린 후에 (tag == skill6 )
+    인 경우에 애니메이션을 실행하고 데미지를 준다.
+    
+    1. 회전 속도 증가(회전 무기의 스피드를 단기간에 크게 올렸다가 다시 돌아온다)
+    스킬 키를 눌렀을 시에 speed 값을 올려 주기만 하면 된다.
+    2. 
+    
+    11.스태틱 (포기)
+    
+    몬스터 자동 스킬()
+    
+    1. 자동공격 (물) -> 근거리
+    -> 가까운 몬스터를 따라가 데미지를 입힌다.
+    2. 자동공격 (불) -> 원거리
+    -> 가까운 몬스터에게 원거리 데미지를 입힌다.(기존 원거리 자동공격을 대입)
+    3. 자동공격 (풀)
+    ->더 느리고 큰 원거리 공격
+    
+    4.주위 돌기(물)
+    
+    5.주위 돌기(불)
+    
+    6.주위 돌기(풀)
+    
+    1. 마우스 따라다니는 몬스터
+    2. 자동 레이저 공격
+    3. 장판 범위 넓어짐
+    4. 슬로우 장판 범위 넓어짐
+    (황윤규)
+    
+    (3)
+    맵제작
+    일단은 1스테이지를 제작하여 갈수 없는 땅이나 나무를 배치한다.
+    
+    해야됨
+    
+    ******************************
+    
+    (대기중)
+    
+    *******************************
+    
+    (4)
+    애니메이션 제작(완료)
+    현재 적용만 열심히 시키면 됨
+    
+    (5)
+    증강에서 나오는 무기를 10개로 만들기
+    (조원준)
+    
+    (6)
+    포켓 서바이벌 로고 제작 (New)
+    (ai 생성 예정)
+    
+    (7)
+    보스전 스킬과 연출 등 보스 제작
+    
+    보스 스킬
+    돌진 스킬 돌진할 위치를 보여주고 그 자리로 돌진
+    jump하는 위치를 보여주고 착지 후
+    다방향으로 총알 날리기
+    
+    (이주환)
+    
+    (8)
+    소환 로직 만들기... ?
+    
+    ******************************
+    
+    (대기중)
+    
+    *******************************
+    
+    (9)
+    몬스터 소환 기능
+    몬스터 소환 갯수 제한
+    (김현규)
+    
+    (10)
+    몬스터 증강 등장 조건 만들기
+    
+    ******************************
+    
+    (대기중)
+    
+    *******************************
+    
+
+## 게임 데이터
+
+---
+
+[팸(몬스터) 데이터](https://ejnu-my.sharepoint.com/:x:/g/personal/194228_jnu_ac_kr/EXsJkH2bOEhOkzgemCgMUUoBQEqb1ZVlSNGgZcxWNNY1QQ?e=0YTe3K)
+
+[적 데이터](https://ejnu-my.sharepoint.com/:x:/g/personal/194228_jnu_ac_kr/EQICk-dd4GlCl-pUl2eZJmQBr45KQw1b6R_FEWgRGxECDA?e=02FwnY)
+
+[경험치 데이터](https://ejnu-my.sharepoint.com/:x:/g/personal/194228_jnu_ac_kr/EU-9-BYd07NLqmf2eDzx7sMB64h4xYmZEXpa-BUkf2egFA?e=RbCUOg)
+
+[웨이브 데이터](https://ejnu-my.sharepoint.com/:x:/g/personal/194228_jnu_ac_kr/ER06pn5qDBlDnOFbkaalD9IBIGz38O2XP3bIkG4uvr18Qg?e=J5mNT0)
+
+![인디게임 난이도 다이어그램.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7d246a17-0d43-4e16-b4f4-16c7922c3f0c/%EC%9D%B8%EB%94%94%EA%B2%8C%EC%9E%84_%EB%82%9C%EC%9D%B4%EB%8F%84_%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8.jpg)
+
+단기 게임 루프 - 중기 게임 루프 - 장기 게임 루프 기반
+
+- 단기 게임 루프(약 15초 내외) : 매우 간단해야 함. 어린 아이라도 간단하게 수행할 수 있는 동작 위주.
+    - 걸어다니며 경험치를 먹고, WASD만 누르면 이동함.
+- 중기 게임 루프(약 10분 내외) : 매우 어려워야 함. 플레이하며 처음 ‘벽’이라고 느끼게끔 하는 구간.
+    - 적들의 체력과 수가 증가. 컨트롤이나 요령이 좋은 유저라면 조금 더 버틸 수 있으나, 대부분의 유저는 이 구간에서 첫 패배를 경험.
+- 장기 게임 루프(약 30시간 이상) : 쉬움부터 어려움까지 다양한 난이도. 중간 루프를 완화하는 역할. 플레이어의 행동에 따라 난이도가 쉬워질 수도, 어려워질 수도 있음.
+    - 각 라운드가 끝나면 플레이어는 중간 루프에서 획득한 골드를 통해 영구 업그레이드가 가능. 구매를 통해 중간 루프를 더 쉽게 진행 가능하며, 플레이어를 완전히 업그레이드하려면 충분한 골드를 모으기 위해 많은 노력이 필요. 하지만 실력이 뛰어난 플레이어는 많은 업그레이드 없이도 더 오래 살아남을 수 있음.
+    → 즉, 실력이 낮은 유저일수록 더 많은 시간이 소요. 하지만 결국 시간을 쏟으면 어느 정도까지는 모두가 가능.
+
+## 기획 사항
+
+---
+
+### 게임 플로우
+
+- 조직도
+    
+    ```
+    메인 화면
+    │
+    ├── 플레이 버튼 ─> 게임 시작
+    │   │
+    │   ├── 스테이지 선택
+    │   │
+    │   └── 몬스터/아이템(후순위) 선택
+    │
+    ├── 몬스터(몬스터 정보/능력치 확인)
+    │
+    ├── 업그레이드
+    │
+    ├── 상점
+    │
+    └── 설정
+    ```
+    
+    ```
+    
+    게임 시작
+    │
+    ├── 전투
+    │   │
+    ├── 자동 공격
+    │   │
+    ├── 이동 및 회피
+    │   │
+    │   ├── 적 처치
+    │   │   │
+    │   │   ├── 경험치 및 아이템 획득
+    │   │   │
+    │   │   ├── 레벨 업
+    │   │   │   └── 능력 업그레이드 / 새로운 스킬 선택
+    │   │   │
+    │   │   └── 아이템 획득
+    │   │
+    ├── 웨이브 관리
+    │   │
+    │   └── 중간 보스(엘리트 보스) 등장
+    │       └── 보스 처치 후 보상 획득
+    │
+    ├── 스테이지 클리어
+    │   └── 스테이지 보스 처치 후 보상 획득
+    │
+    └── 게임 오버
+    │
+    └── 게임 종료 조건
+        ├── 캐릭터 사망
+        ├── 목표 시간 경과
+        └── 결과 화면으로 이동
+    ```
+    
+    ```
+    
+    결과 화면
+    │
+    ├── 보상 획득
+    │
+    └── 메인 화면으로 이동
+    
+    ```
+    
+
+### 기초 시스템 기획
+
+현재 방식) 자동 공격 시 몬스터가 나타나 있는 상태로, 캐릭터 주변에서 공격
+
+→ 몬스터 6마리를 보유했다고 가정했을 때, 너무 어지러워질 수 있음. 또한 크기가 작은 몬스터는 괜찮지만, 큰 몬스터가 있을 경우 문제가 더할 것으로 예상됨.
+
+- 1안) 자동 공격 시 몬스터가 나타나 있는 게 아니라, 공격만 나오다가 스킬 사용 시 몬스터가 등장하는 방식
+    
+    → 화면이 보다 안정됨. 스킬 사용 시 극적인 느낌이 더해질 수 있음
+    
+- 2안) 시작 시 주 몬스터로 선택한 몬스터의 스킬만 사용 가능. 주 몬스터와 나머지 몬스터들은 자동 공격만 가능.
+- 몬스터 포획 및 동료 시스템
+    
+    초기 기획 : 몬스터를 쓰러트리면 몬스터가 흐릿해지며 그 자리에 고정됨. 이 상태의 적을 포획 가능.
+    
+    → 이 경우 다량의 몬스터가 스폰되고 처치될 경우 흐릿한 잔상과 몬스터가 섞여 화면이 혼잡해질 우려가 있음. 이에 대한 해결 방안으로 스폰되는 몬스터들 중 일정 확률로 반짝이는 개체가 있고, 이 몬스터만 포획할 수 있도록 하는 방식을 기획 중.
+    
+    - 장점
+        - 다양성 : 다양한 몬스터를 수집하여 플레이 스타일을 변화시킬 수 있어 반복 플레이의 재미를 높임
+        - 수집의 재미 : 수집 요소를 통해 플레이어가 게임에 몰입할 수 있음
+    - 단점
+        - 초반 진입 장벽 : 무기를 주는 대신 몬스터를 포획하는 시스템이 복잡하게 느껴질 수 있음
+- 몬스터 속성 및 상성 시스템
+    
+    → 포켓몬처럼 종족값, 개체값까지 추가하면 게임의 복잡성이 너무 커지기 때문에 같은 개체라면 동일한 능력치 및 스킬을 가지도록, 뱀서라이크 장르에 맞게 설정.
+    
+    - 장점
+        - 전략성 :  속성과 상성 시스템을 통해 전략적인 팀 구성이 가능하여 게임의 깊이를 더함
+    - 단점
+        - 복잡성 : 속성 및 상성 시스템이 지나치게 복잡할 경우 플레이어가 혼란스러워할 수 있음
+    - 개선 아이디어
+        - 직관적인 UI 제공 : 한 눈에 속성과 상성을 파악할 수 있도록 시각적으로 명확한 UI 제공(속성 아이콘 등)
+        - 상성 표 : 상성 표를 단순하게 구성하여 플레이어가 쉽게 파악할 수 있도록 함
+- 몬스터 특성 및 스킬 시스템
+    
+    → 몬스터의 스킬을 돌려가며 사용하는 식으로 무한 스킬을 사용하는 것을 방지하기 위한 방안 필요
+    
+    - 몬스터 교체 쿨다운 : 몬스터 교체 시 일정 시간의 쿨다운을 부여해, 플레이어가 몬스터를 빈번하게 교체할 수 없도록 함.
+        - 몬스터를 교체한 후에는 n초 동안 다른 몬스터로 교체할 수 없습니다.
+    - 전체 스킬 쿨다운 : 한 마리의 몬스터가 스킬을 사용하면, 다른 몬스터들도 일정 시간 동안 스킬을 사용할 수 없도록 전체 쿨다운을 부여
+        - 한 몬스터가 스킬을 사용하면 모든 몬스터의 스킬에 n초의 쿨다운이 적용됩니다.
+    - 스태미나 시스템 : 스킬 사용 시 스태미나를 소모하도록 설정하고, 스태미나가 부족할 경우 스킬을 사용할 수 없도록 함. 스태미나는 시간에 따라 천천히 회복되거나, 드랍된 아이템을 통해 회복할 수 있음.
+        - 스킬 사용 시 n의 스태미나 소비, 스태미나 최대치 100, 스태미나는 1초당 x회복
+    - 스킬 사용에 따른 패널티 : 스킬 사용 후 일정 시간 동안 해당 몬스터의 공격력이 감소하거나 자동 공격이 불가해지는 등의 패널티를 부여하여, 스킬 남용을 억제.
+        - 스킬 사용 시 공격력이 30% 감소합니다.
+- 몬스터 선택 및 주 무기화 시스템
+    
+    → 몬스터는 기본적으로 자동 공격. 화면 왼쪽 하단 UI를 통해 현재 보유 중인 몬스터를 확인할 수 있음. Tab키(또는 숫자키, 마우스 휠 등)를 눌러 보유 중인 몬스터 중 하나를 선택할 수 있으며, 현재 선택되어 있는 몬스터의 스킬 UI가 화면 오른쪽 하단에 나타남. 스킬은 Q와 E를 통해 사용할 수 있으며(주 속성 및 서브 속성), 스킬 쿨다운은 스킬 UI 위에 시계 방향으로 줄어드는 음영 처리 등을 통해 시각적으로 쉽게 알 수 있도록 표시
+    
+    - 장점
+        - 전략적 선택 :  특정 몬스터를 주 무기처럼 사용하여 상황에 맞는 전략적 플레이가 가능
+    - 단점
+        - 복잡한 조작 : 몬스터를 선택하고 스킬을 사용하는 조작이 복잡할 수 있음
+- 로그라이트 요소
+    
+    → 몬스터를 처치했을 때 일정 확률로 드랍되는 ‘기운(가칭)’을 모아 주인공을 강화할 수 있음. 강화 요소는 기초 패시브와 특수 패시브가 존재
+    
+    - 기초 패시브
+        - 공격력
+        - 방어력
+        - 최대 체력
+        - 회복
+        - 쿨타임
+        - 공격 범위
+        - 투사체 속도
+        - 지속시간
+        - 투사체 수
+        - 이동속도
+        - 치명
+        - 치명 피해
+    - 특수 패시브
+        - 자석
+        - 행운
+        - 성장
+        - 풍요
+        - 악몽
+        - 부활
+        - 약화
+        - 다시 뽑기
+
+### 콘텐츠 기획
+
+- 최초 플레이 시 스토리 모드 권장. 튜토리얼을 진행하며 게임의 기초를 학습하고 로비 등의 시스템이 개방되며 이후 스토리는 스테이지 방식으로 진행됨.
+- 다른 모드로는 다른 속성별 몬스터들을 파밍할 수 있는 ‘탐험’모드가 존재하고(수동/자동 여부는 나중에 판단 - 아마 자동), 스토리 모드를 모두 완료하면 이후 아케이드 모드(무한 모드), 이벤트 모드 등의 모드들 개방
+- 몬스터와의 상호작용
+    - 친밀도 시스템 : 몬스터와의 친밀도를 높여 다양한 보너스를 얻을 수 있는 시스템을 도입. ex) 쓰다듬기, 먹이 주기
+    - 몬스터 마을 : 플레이어가 모은 몬스터들이 머무를 수 있는 아기자기한 공간을 만들고, 이곳에서 힐링 요소 제공
+    - 몬스터 도감 : 몬스터 도감을 채우고, 수집도에 따라 간단한 보상 또는 꾸미기 요소 등을 지급하여 수집 욕구를 충족시킬 수 있도록 함
+- 미니게임 및 이벤트
+    - 힐링 미니게임 : 주 게임 플레이 이외에도 힐링과 관련된 미니게임을 추가하여 다양한 즐거움 제공 ex) 마을 가꾸기, 낚시, 새가 물어오는 보석 등
+    - 이벤트 : 계절 이벤트나 콘텐츠 이벤트 등 다양한 이벤트를 열어 쉽게 질리지 않도록 함
+
+### 후순위 개발 사항(시간 많이 남을때)
+
+- 도전과제 및 업적 시스템
+- 일일 퀘스트 및 주간 퀘스트(리워드로 인게임 재화나 알까기 등)
+- 몬스터 교환 시스템(ex. 포켓몬 통신 교환처럼 서버를 통한 교환)
+- 종족값 및 개체값 추가(최후의 최후의 최후 컨텐츠 - 너무 오래 걸리고 복잡함)
+
+# 구현
+
+---
+
+## 제작 진행 현황
+
+---
+
+- 핵심 게임 매커니즘
+    - 기본 전투 시스템
+        - [ ]  몬스터 자동 공격 시스템
+        - [x]  플레이어의 이동 및 회피 매커니즘
+        - [x]  적의 스폰 및 공격 패턴
+    - 보스 시스템
+        - [ ]  보스 전조
+        - [ ]  보스 등장 연출
+        - [x]  일직선 돌진 공격
+        - [x]  총알 패턴
+- 캐릭터 및 몬스터 시스템
+    - 주인공 캐릭터
+        - [x]  기본 이동 및 조작
+    - 몬스터
+        - [x]  기본 몬스터 AI 및 행동 패턴
+        - [ ]  원거리 몬스터 AI 및 행동 패턴
+        - [ ]  몬스터 스킬 구현
+- 스테이지 및 레벨 시스템
+    - 스테이지 구조
+        - [x]  기본 스테이지 생성 및 초기 적 배치
+        - [x]  스테이지 클리어 조건 및 보상 시스템
+        - [x]  오브젝트 생성
+    - 레벨 업 시스템
+        - [x]  경험치 획득 및 레벨업 메커니즘
+        - [x]  레벨업 시 스킬 선택 인터페이스
+- UI/UX 시스템
+    - 기본 UI 구성
+        - [ ]  화면 왼쪽 상단: 현재 보유 중인 몬스터 리스트, 선택된 몬스터의 스킬 UI
+        - [ ]  화면 중앙 상단 : 레벨, 체력 바, 경험치 바
+        - [ ]  화면 오른쪽 상단 : 일시정지, 설정 UI
+    - 메인 메뉴
+        - [ ]  게임 시작 버튼
+        - [ ]  캐릭터 업그레이드 버튼
+        - [ ]  기본 설정 메뉴
+        - [ ]  튜토리얼 설명 수정
+    - 사운드
+        - [ ]  로비 사운드
+        - [ ]  스킬 사운드
+        - [x]  전투 사운드
+        - [x]  사망 사운드
+        - [ ]  배경음(교체)
+        - [ ]  보스 등장 사운드 및 보스 스킬 사운드
+- 기본 패시브 시스템
+    - 기초 패시브
+        - [ ]  공격력, 방어력, 최대 체력, 회복, 쿨타임, 공격 범위, 투사체 속도, 지속시간, 투사체 수, 이동속도, 치명, 치명 피해
+    - 특수 패시브
+        - [ ]  자석, 행운, 성장, 풍요, 악몽, 부활, 약화, 다시 뽑기
+
+### **클래스나 메소드 이름 명명 방법**
+
+- 네이밍 규칙
+    - C# 스크립트 파일 생성할 때: Pascal Case, 명사형 사용
+    - 함수, 클래스: Pascal Case, 명사형 사용
+    - 인터페이스: Pascal Case, I 접두사 붙임(Ex. IEnumerator)
+    - 메서드: camel Case,  동사형 사용(Ex. DeleteObject)
+    - public 멤버 변수: Pascal Case,
+    - private 멤버 변수: camel Case, _접두사 붙임(지역변수와의 구분 위해)
+    - 지역 변수: camel Case
+    - 부울 변수: camel Case, is,can,has 등의 접두사 사용(Ex. isLive)
+    - enum 및 enum 멤버: Pascal Case, 명사 사용
+- [ ]  <공격 시스템(플레이어가 직접 발사하는 방식이 아니라 포획한 몬스터가 공격하는 방식으로 만들기)>
+- [ ]  <스킬 시스템(지정된 키를 입력해서 스킬 이펙트 출력 밎 효과 발생)>
+- [ ]  <레벨업 시스템(자신이 현재 포획한 몬스터를 구분할 수 있게, 현재 포획된 몬스터를 강화하는 방식)>
+- [ ]  [속성(상성별 데미지 공식 적용)]
+- [ ]  [맵(한정된 맵, 미리 생성됨 Ex .아이작)]
+
+## 버그 리스트
+
+---
+
+## 버그 수정 진행 사항
+
+---
+
+## 수정 사항
