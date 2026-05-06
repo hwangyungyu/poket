@@ -86,156 +86,22 @@
     → 피드백) 다음부턴 1픽셀로 제작하여 크기 조절 안할 수 있도록 조정하겠습니다.
     
     - 주인공 일러스트 레퍼런스 (숲의 아이 느낌 - 몬스터도 아기자기한 느낌으로)
-        
-        ![린.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/9128bfea-4cc4-4350-b663-07da1d1c2746/%EB%A6%B0.png)
-        
-    
-    [Lobby Music.mp3](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/afb9ebd1-a832-4453-bf8f-8b6614e49167/Lobby_Music.mp3)
-    
-    ![Button01_White.Png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ac63afbf-9b8d-4e8c-8f5a-4e56991e4823/Button01_White.png)
-    
-    ![lobby image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c7d42970-5679-46be-b981-fed097d47764/lobby_image.png)
-    
-    ![스크린샷 2024-07-22 142602.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c31a0208-9c0a-4ae1-b796-71df91535662/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-07-22_142602.png)
-    
-    ![pixil-frame-0 (5).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/df750944-05f0-4062-8487-7d1f85fc6a3b/pixil-frame-0_(5).png)
-    
-    ![pixil-frame-0 (4).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7c81ec30-b8dd-4b49-a0fa-3d6876904b98/pixil-frame-0_(4).png)
-    
-    ![fix_human.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/f120c799-05e9-4b4b-a55f-bd9772cc9afc/fix_human.png)
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ffd659c7-5519-4e17-9c85-3baeb6084d1c/Untitled.png)
-    
-    라임 - 회전
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0abf89e0-6156-42f6-8920-5f20c6becbf0/Untitled.png)
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c85ae92d-1ed7-445d-884c-9629b60824c4/Untitled.png)
-    
-    ![fire_bear.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7e8f55e9-3245-4723-aac7-5ecfd545a257/fire_bear.png)
-    
-    ![hit_firebear1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0517e43f-5de3-4ed4-8a9b-28982971e7ce/hit_firebear1.png)
-    
-    ![pixil-frame-0.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/758a81a2-5832-401f-91bb-5b567de7fa97/pixil-frame-0.png)
-    
-    ![hit_firebear.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/30593d81-978d-4aea-b630-79e57b8a0155/hit_firebear.png)
-    
-    파이츄 - 파이어볼
-    
-    ![sora_turtle.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/1a510ebf-2232-4166-8abc-f964f894fa74/sora_turtle.png)
-    
-    ![turtoe_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/be28b255-7c22-43dd-8d3f-f5e55b2d162d/turtoe_hit1.png)
-    
-    ![sora_turtle2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/a59eb2ee-ef5f-4896-b9e1-55de044bc852/sora_turtle2.png)
-    
-    ![turtle_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/60a598f2-5a4c-4e4f-8efc-202d6714853f/turtle_hit2.png)
-    
-    소라북 - 레이저
-    
-    ![water_galmegi.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/4c5d3b3a-ccfc-40d9-9b2e-285b42b444e5/water_galmegi.png)
-    
-    ![bird_hit.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/4fee8aff-5f48-4f76-aeb2-6d179186335b/bird_hit.png)
-    
-    ![water_galmegi2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/b2961d45-caa8-4072-aa58-1c62e0504247/water_galmegi2.png)
-    
-    ![bird_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/98ef52c4-d2ed-4fd1-93f5-9350eeae582c/bird_hit2.png)
-    
-    갈루 - 투척
-    
-    ![fish2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/37c405ba-eba6-4978-a58a-f8d4e4b241f9/fish2.png)
-    
-    ![wheal_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/25efea97-9420-4b84-9ebd-447601944b20/wheal_hit2.png)
-    
-    ![fish1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/2db1fcf2-4918-4b2e-a362-030275bcd256/fish1.png)
-    
-    ![wheal_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/b45be7f6-cca1-4f4c-b108-b0b6652f2b88/wheal_hit1.png)
-    
-    가이오 - 슬로우
-    
-    ![버섯2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0b0cf674-70ce-4821-8d6e-d3e9436dda49/%EB%B2%84%EC%84%AF2.png)
-    
-    ![mush_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ea3489c8-60fc-4c9d-aa27-80657a69e0b1/mush_hit2.png)
-    
-    ![버섯.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c3186b09-1c4b-4d62-87fd-2828d70b9b33/%EB%B2%84%EC%84%AF.png)
-    
-    ![mush_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0c1e722d-0e39-46a2-95b1-fa83cac36d8d/mush_hit1.png)
-    
-    무쉬 - 거대총알
-    
-    ![cat2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7e2f83bb-4462-42e6-8bef-f6795690207e/cat2.png)
-    
-    ![cat_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7b5eef0a-f078-4dec-acff-915a9079fc5d/cat_hit2.png)
-    
-    ![cat.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/363e5627-8bb3-4715-9e4f-3a8045f9d428/cat.png)
-    
-    ![cat_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ad61ad3b-9324-4c82-b4c6-cd06a9587480/cat_hit1.png)
-    
-    물랑이 - 마우스 유도
-    
-    ![small_bird2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/9d895452-69e4-41c0-84d9-d8653bcf6cea/small_bird2.png)
-    
-    ![s_bird_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7789dde5-bc7f-4c8d-97cb-c9a2bdabd62c/s_bird_hit2.png)
-    
-    ![small_bird.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/ea03e29a-4584-489c-adae-cdf169233754/small_bird.png)
-    
-    ![s_bird_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/3bc73efa-7377-4020-8191-d2df587dc794/s_bird_hit1.png)
-    
-    헤이 - 기본 적
-    
-    ![fire1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/3e9bba75-f637-4077-b688-b6cdcde4506e/fire1.png)
-    
-    ![fir_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/338158d1-b3e5-46a7-9890-a48ad7861ab2/fir_hit1.png)
-    
-    ![fire2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/784449ca-9020-4696-b05e-754875967f20/fire2.png)
-    
-    ![fir_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/e4994137-3f15-48df-8f68-b77884d2300d/fir_hit2.png)
-    
-    불마뱀 - 지속 딜 장판
-    
-    ![dead2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/a6e42a9c-0d2f-4561-94f0-73974d5a7d0f/dead2.png)
-    
-    ![dead1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/e7669378-9069-434d-9b99-f0bf3ce49632/dead1.png)
-    
-    ![frie_dog1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0772b741-9234-4824-81de-ddc2f8a046d9/frie_dog1.png)
-    
-    ![fire_dog_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/d2966325-30e5-43ca-9c02-cb78d851374c/fire_dog_hit1.png)
-    
-    ![fire_dog2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/83891f31-d80e-4be8-8ebf-1ce3f233a903/fire_dog2.png)
-    
-    ![fire_dog_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/d63fd335-a906-4e46-8ee0-f8ee765fbec9/fire_dog_hit2.png)
-    
-    에이스 - 빠른 적
-    
-    ![leaf_hit1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/29a91cac-d9ed-4aa1-9f08-98fa2840a5b7/leaf_hit1.png)
-    
-    ![leaf_mons.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/466bc0e8-42b4-4eb1-8b2e-49ded9a13ffe/leaf_mons.png)
-    
-    ![leaf_hit2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/d71ad90d-5272-4cf5-b37a-e557fb6c2dfd/leaf_hit2.png)
-    
-    ![leaf_mons2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c52e3452-b864-49cf-a1b4-6ca92f02a7b6/leaf_mons2.png)
-    
-    품바 - 원거리 적
-    
-    ![pixil-frame-0 (1).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/6ed5d8dc-4d96-4fe7-9506-3a6a3d488144/pixil-frame-0_(1).png)
-    
-    ![pixil-frame-0.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/7b5faba0-8256-4a5a-bd22-ae22f0a9eff0/pixil-frame-0.png)
-    
-    보스
-    
-    패턴 1 - 돌진 : 붉은 일직선 레이저로 경로를 표시해준 후 몇 초가 지나면 돌진
-    
-    패턴 2 - 총알 발사 : 전방위로 총알을 3~4회 발사 (이전 파이츄 느낌)
-    
-    로고
-    
-    ![pixil-frame-0 (1).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/f66c00c0-3bf8-4c6a-ac08-91682f3b0520/pixil-frame-0_(1).png)
-    
-    ![pixil-frame-0 (2).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/c4fa55b8-2756-4d6f-bcf6-693de905e5c6/pixil-frame-0_(2).png)
-    
-    ![pixil-frame-0 (3).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/0c8aec3b-588b-4b9f-b7d1-d92b49832386/pixil-frame-0_(3).png)
-    
+        <img width="384" height="384" alt="fix_human" src="https://github.com/user-attachments/assets/51ea731b-57ba-4106-9278-4c5988425130" />
+<img width="192" height="192" alt="Untitled" src="https://github.com/user-attachments/assets/ccf95385-0f0e-4cfb-a32e-10f82fe82fd0" />
+<img width="128" height="128" alt="pixil-frame-0" src="https://github.com/user-attachments/assets/7004d09d-bf33-45a2-8f50-6234c53a22fc" />
+<img width="128" height="128" alt="sora_turtle2" src="https://github.com/user-attachments/assets/bac54e6e-680c-4963-9f80-dfd97b236a9e" />
+<img width="128" height="128" alt="water_galmegi2" src="https://github.com/user-attachments/assets/f1544d2f-c33b-43de-9fe6-c950f5b0685d" />
+<img width="128" height="128" alt="fish2" src="https://github.com/user-attachments/assets/36331dc7-e711-458a-adae-7febd598abd7" />
+<img width="128" height="128" alt="버섯2" src="https://github.com/user-attachments/assets/e6e7a4d7-23e3-4f1d-bdfd-cada6f1d2668" />
+<img width="128" height="128" alt="cat2" src="https://github.com/user-attachments/assets/3b976b45-fd50-49ad-82ac-9295362cb475" />
+<img width="256" height="256" alt="small_bird2" src="https://github.com/user-attachments/assets/4c627b72-3e64-4cd5-be9c-3ca8f305a324" />
+<img width="128" height="128" alt="fire2" src="https://github.com/user-attachments/assets/31351380-971e-4a66-95fc-c9ad95f8a4e8" />
+<img width="128" height="128" alt="fire_dog2" src="https://github.com/user-attachments/assets/0e37b4f5-20fa-47ab-a9a5-339bc0595a51" />
+<img width="384" height="384" alt="pixil-frame-0 (1)" src="https://github.com/user-attachments/assets/2e7fbdb2-bc2b-4238-af3d-55b8bc334152" />
+<img width="1200" height="1200" alt="pixil-frame-0 (5)" src="https://github.com/user-attachments/assets/59a5b6d8-705a-48c7-a980-74e45a1fcd9b" />
+<img width="1890" height="1080" alt="lobby image" src="https://github.com/user-attachments/assets/e50a586f-d672-4967-b356-7f34a83f84e5" />
 
-![포켓로고.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/231d833c-b881-4443-9d89-ecd223e61c8d/aff853dd-a162-4125-9af3-b178bd93e3a9/%ED%8F%AC%EC%BC%93%EB%A1%9C%EA%B3%A0.png)
+       
 
 ### 일정
 
